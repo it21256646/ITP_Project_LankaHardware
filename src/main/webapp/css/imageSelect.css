@@ -1,0 +1,90 @@
+/* MAIN STYLE */
+
+.reviewCard {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.reviewCard .drag-area {
+	width: 100%;
+	height: 45px;
+	border-radius: 5px;
+	border: 2px dashed #dbcc8f;
+	color: #c8c9dd;
+	font-size: 0.9rem;
+	font-weight: 500;
+	position: relative;
+	background: #dbcc8f14;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+	margin-top: 10px;
+}
+
+.reviewCard .drag-area .visible {
+	font-size: 18px;
+}
+.reviewCard .select {
+    color: #dbcc8f;
+	margin-left: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.reviewCard .select:hover {
+	opacity: 0.6;
+}
+
+.reviewCard .imageContainer {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-height: 200px;
+	overflow-y: auto;
+	margin-top: 10px;
+}
+
+.reviewCard .imageContainer .image {
+	width: calc(26% - 19px);
+	margin-right: 15px;
+	height: 75px;
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.reviewCard .imageContainer .image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.reviewCard .imageContainer .image span {
+	position: absolute;
+	top: -2px;
+	right: 9px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+/* dragover class will used in drag and drop system */
+.reviewCard .drag-area.dragover {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.reviewCard .drag-area.dragover .on-drop {
+	display: inline;
+	font-size: 28px;
+}
+
+.reviewCard input,
+.reviewCard .drag-area .on-drop, 
+.reviewCard .drag-area.dragover .visible {
+	display: none;
+}
